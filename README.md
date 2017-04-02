@@ -35,6 +35,7 @@ BANNED PACKAGES
 
 ## Roadmap
 
-- [ ] Initial Android Setup
+- [x] Initial Android Setup
+- [ ] Initial IOS Setup
 - [ ] Wireframes
 - [ ] Mockups
