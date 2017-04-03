@@ -1,3 +1,0 @@
-{"C:\\Parmyaymobile\\src\\index.js": {"path":"C:\\Parmyaymobile\\src\\index.js","statementMap":{"0":{"start":{"line":8,"column":2},"end":{"line":14,"column":4}}},"fnMap":{"0":{"name":"(anonymous_0)","decl":{"start":{"line":7,"column":1},"end":{"line":7,"column":2}},"loc":{"start":{"line":7,"column":10},"end":{"line":15,"column":2}},"line":7}},"branchMap":{},"s":{"0":2},"f":{"0":2},"b":{},"_coverageSchema":"332fd63041d2c1bcb487cc26dd0d5f7d97098a6c","hash":"4adf614bd45053d32874d2436cd545d73822d4c8"}
-,"C:\\Parmyaymobile\\src\\styles.js": {"path":"C:\\Parmyaymobile\\src\\styles.js","statementMap":{},"fnMap":{},"branchMap":{},"s":{},"f":{},"b":{},"_coverageSchema":"332fd63041d2c1bcb487cc26dd0d5f7d97098a6c","hash":"941791f1c4eb13856f151078c65e620506aa0ee8"}
-}
