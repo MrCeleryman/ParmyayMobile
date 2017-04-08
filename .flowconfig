@@ -1,13 +1,11 @@
 [ignore]
 
-<PROJECT_ROOT>/node_modules/.*
-
 <PROJECT_ROOT>/android/.*
-
+<PROJECT_ROOT>/node_modules/.*
 <PROJECT_ROOT>/ios/.*
-
 ; We fork some components by platform
-.*/*[.]android.js
+.*/node_modules/.*/*[.]android.js
+.*/node_modules/.*/*[.]ios.js
 
 ; Ignore "BUCK" generated dirs
 <PROJECT_ROOT>/\.buckd/
@@ -15,22 +13,14 @@
 ; Ignore unexpected extra "@providesModule"
 .*/node_modules/.*/node_modules/fbjs/.*
 
-; Ignore duplicate module providers
-; For RN Apps installed via npm, "Libraries" folder is inside
-; "node_modules/react-native" but in the source repo it is in the root
-.*/Libraries/react-native/React.js
-.*/Libraries/react-native/ReactNative.js
-
 [include]
 
 [libs]
-node_modules/react-native/Libraries/react-native/react-native-interface.js
+<PROJECT_ROOT>/node_modules/react-native/Libraries/react-native/react-native-interface.js
 node_modules/react-native/flow
-flow/
 
 [options]
 emoji=true
-
 module.system=haste
 
 experimental.strict_type_args=true
@@ -50,4 +40,4 @@ suppress_comment=\\(.\\|\n\\)*\\$FlowFixedInNextDeploy
 unsafe.enable_getters_and_setters=true
 
 [version]
-^0.42.0
+^0.43.1
