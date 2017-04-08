@@ -1,4 +1,4 @@
-# :iphone: Parmyaymobile :iphone:
+# :iphone: ParmyayMobile :iphone:
 Mobile app for [Parmyay](https://github.com/MrCeleryman/Parmyay)
 
 ## Stack
