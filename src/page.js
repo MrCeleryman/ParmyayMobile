@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { Text, View } from "react-native";
 import styles from "./styles";
 
-export default class Home extends Component {
+export default class Page extends Component {
 	static navigationOptions = {
 		title: "Test Page"
 	};
