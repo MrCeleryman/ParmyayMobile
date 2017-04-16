@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { Text, View } from "react-native";
 import { Button } from "./components";
 import styles from "./styles";
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default class Home extends Component {
 
@@ -11,7 +12,13 @@ export default class Home extends Component {
 	}
 
 	static navigationOptions = {
-		title: "ParmyayMobile"
+		title: "Home Page",
+		drawer: () => ({
+			label: 'Parmyay',
+			icon: () => (
+				<Icon name="home" />
+			),
+		}),
 	};
 
 	navigateToPage = () => {
@@ -22,11 +29,12 @@ export default class Home extends Component {
 		return (
 			<View style={styles.container}>
 				<Text style={styles.welcome}>
-					Welcome to Parmyaymobile
+					Welcome to Parmyaymobile!
 				</Text>
-				<Button text="Go to test page" onPress={this.navigateToPage} />
-				<Button text="Flat button" flat />
-				<Button text="Raised disabled" disabled />
+				
+				<Button text="Go to rate a Parmy" onPress={this.navigateToPage} />
+				<Button text="Open Drawer" flat onPress={this.props.navigation.navigate("DrawerOpen")}/>
+				<Button text="Close Drawer" disabled onPress={this.props.navigation.navigate("DrawerClose")}/>
 				<Button text="Flat disabled" flat disabled />
 			</View>
 		);

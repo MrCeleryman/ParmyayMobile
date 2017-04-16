@@ -1,9 +1,18 @@
 // @flow
-import { StackNavigator } from "react-navigation";
+import { DrawerNavigator, StackNavigator } from "react-navigation";
 import Home from "./home";
 import Page from "./page";
 
-export default StackNavigator({
+const Drawer =  DrawerNavigator({
 	Home: { screen: Home },
 	Page: { screen: Page }
-}, { initialRouteName: "Home" });
+}, { 
+	initialRouteName: "Home",
+	drawerWidth: 200
+ });
+
+ export default StackNavigator({
+	Drawer: { screen: Drawer }
+}, { 
+	initialRouteName: "Drawer",
+ });
