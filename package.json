@@ -1,48 +1,49 @@
 {
-	"name": "Parmyaymobile",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"android": "adb reverse tcp:8081 tcp:8081 && node node_modules/react-native/local-cli/cli.js run-android -- -reset-cache",
-		"android:clean": "npm-run-all prebuild android",
-		"cache": "node_modules/.bin/rimraf %appdata%\\npm-cache",
-		"clean": "node_modules/.bin/rimraf ./android/build ./android/app/build",
-		"flow": "node_modules/.bin/flow ",
-		"lint": "eslint src",
-		"prebuild": "npm-run-all cache clean watchres lint",
-		"start": "node node_modules/react-native/local-cli/cli.js start",
-		"test": "jest",
-		"test:coverage": "jest --coverage",
-		"test:update": "jest -u",
-		"test:watch": "jest --watch",
-		"watchres": "watchman watch-del-all && watchman watch-project C:\\Parmyaymobile"
-	},
-	"dependencies": {
-		"mobile-center-analytics": "0.4.0",
-		"mobile-center-crashes": "0.4.0",
-		"react": "15.5.1",
-		"react-native": "0.42.3",
-		"react-navigation": "1.0.0-beta.7"
-	},
-	"devDependencies": {
-		"babel-eslint": "7.2.1",
-		"babel-jest": "19.0.0",
-		"babel-preset-flow": "6.23.0",
-		"babel-preset-react-native-stage-0": "1.0.1",
-		"eslint": "3.19.0",
-		"eslint-plugin-babel": "4.1.1",
-		"eslint-plugin-flowtype": "2.30.4",
-		"eslint-plugin-import": "2.2.0",
-		"eslint-plugin-react": "6.10.3",
-		"eslint-plugin-react-native": "2.3.1",
-		"flow-bin": "0.43.1",
-		"jest": "19.0.2",
-		"npm-run-all": "4.0.2",
-		"react-test-renderer": "15.5.1",
-		"rimraf": "2.6.1"
-	},
-	"jest": {
-		"preset": "react-native",
-		"verbose": true
-	}
+  "name": "Parmyaymobile",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "adb reverse tcp:8081 tcp:8081 && node node_modules/react-native/local-cli/cli.js run-android -- -reset-cache",
+    "android:clean": "npm-run-all prebuild android",
+    "cache": "node_modules/.bin/rimraf %appdata%\\npm-cache",
+    "clean": "node_modules/.bin/rimraf ./android/build ./android/app/build",
+    "flow": "node_modules/.bin/flow ",
+    "lint": "eslint src",
+    "prebuild": "npm-run-all cache clean watchres lint",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:update": "jest -u",
+    "test:watch": "jest --watch",
+    "watchres": "watchman watch-del-all && watchman watch-project C:\\Users\\Jonathan\\Documents\\ParmyayMobile"
+  },
+  "dependencies": {
+    "mobile-center-analytics": "0.4.0",
+    "mobile-center-crashes": "0.4.0",
+    "react": "15.5.1",
+    "react-native": "0.42.3",
+    "react-native-vector-icons": "^4.0.1",
+    "react-navigation": "1.0.0-beta.7"
+  },
+  "devDependencies": {
+    "babel-eslint": "7.2.1",
+    "babel-jest": "19.0.0",
+    "babel-preset-flow": "6.23.0",
+    "babel-preset-react-native-stage-0": "1.0.1",
+    "eslint": "3.19.0",
+    "eslint-plugin-babel": "4.1.1",
+    "eslint-plugin-flowtype": "2.30.4",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-react": "6.10.3",
+    "eslint-plugin-react-native": "2.3.1",
+    "flow-bin": "0.43.1",
+    "jest": "19.0.2",
+    "npm-run-all": "4.0.2",
+    "react-test-renderer": "15.5.1",
+    "rimraf": "2.6.1"
+  },
+  "jest": {
+    "preset": "react-native",
+    "verbose": true
+  }
 }
