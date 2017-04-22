@@ -12,25 +12,9 @@ export default StyleSheet.create({
 	welcome: {
 		fontSize: 20,
 		textAlign: "center",
-		margin: 10,
+		margin: 10
 	},
-	input: {
-		color: '#000',
-		paddingRight: 5,
-		paddingLeft: 5,
-		fontSize: 16,
-		lineHeight: 21,
-		flex: 2
-	},
-	label: {
-		fontSize: 16,
-		paddingLeft: 20,
-		flex: 1
-	},
-	formContainer: {
-		height: 40,
-		flex: 1,
-		flexDirection: 'row',
-		alignItems: 'center'
+	buttonbar: {
+        flexDirection: "row"
 	}
 });

@@ -7,6 +7,7 @@ import type { Button } from "../types";
 export default (props: Button) => {
 
 	const getStyle = (props: Button, style: any) => ([
+		props.wide ? style.buttonWide : null,
 		props.flat ? style.buttonFlat : style.buttonRaised,
 		props.style,
 		props.disabled && !props.flat ? style.buttonRaisedDisabled : null

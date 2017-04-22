@@ -1,26 +1,18 @@
 // @flow
 import React from 'react';
-import { TextInput, View, Text } from 'react-native';
+import { TextInput, View, Text, Image } from 'react-native';
 import styles from "./styles";
 import type { Input } from "../types";
 
 export default (props: Input) => {
 
-	const getStyle = (props: Input, style: any) => ([
-		style.Input
-	]);
-
-	const getLabelStyle = (props: Input, style: any) => ([
-		style.label
-	]);
-
-    const getContainerStyle = (props: Input, style: any) => ([
-		style.formContainer
-	]);
-
 	return (
-		<View style={getContainerStyle(props, styles)}>
-            <Text style={getLabelStyle(props, styles)}>
+		<View style={styles.formContainer}>
+            {props.iconLeft && <Image 
+              style={{width: 50, height: 50}}
+              source={{uri: props.src}}
+            />}
+            <Text style={styles.label}>
                 {props.label}
             </Text>
             <TextInput
@@ -29,8 +21,12 @@ export default (props: Input) => {
                 autoCorrect={false}
                 value={props.value}
                 onChangeText={props.onChangeText}
-                style={getStyle(props, styles)}
+                style={styles.input}
             />
+            {props.iconRight && <Image 
+              style={{width: 50, height: 50}}
+              source={{uri: props.src}}
+            />}
         </View>
 	);
 }

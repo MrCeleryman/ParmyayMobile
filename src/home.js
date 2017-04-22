@@ -1,7 +1,7 @@
 //@flow
 import React, { Component } from "react";
 import { Text, View } from "react-native";
-import { Button } from "./components";
+import { Button, Input } from "./components";
 import styles from "./styles";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -31,11 +31,12 @@ export default class Home extends Component {
 				<Text style={styles.welcome}>
 					Welcome to Parmyaymobile!
 				</Text>
-				
-				<Button text="Go to rate a Parmy" onPress={this.navigateToPage} />
-				<Button text="Open Drawer" flat onPress={this.props.navigation.navigate("DrawerOpen")}/>
-				<Button text="Close Drawer" disabled onPress={this.props.navigation.navigate("DrawerClose")}/>
-				<Button text="Flat disabled" flat disabled />
+				<Input label="Email" iconLeft src="http://pizzalinos.letseat.at/images/social_urbanspoon.png?1445209169"/>
+				<Input label="Password" iconLeft src="https://cdn4.iconfinder.com/data/icons/standard-free-icons/139/Safety01-128.png"/>
+				<View style={styles.buttonbar}>
+				  <Button text="Signup" wide disabled />
+			 	  <Button text="Signin" wide disabled />
+				</View>
 			</View>
 		);
 	}

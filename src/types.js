@@ -12,6 +12,9 @@ type Button = {
 
 type Input = {
 	label: string,
+	iconLeft?: boolean,
+	iconRight?: boolean,
+	src?: string,
 	value?: string,
 	onChangeText?: Function,
 	placeholder?: string,
