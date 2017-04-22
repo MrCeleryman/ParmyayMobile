@@ -1,4 +1,4 @@
-//@flow
+// @flow
 import React, { Component } from "react";
 import { Text, TextInput, View, Animated, Image, Easing, ScrollView } from "react-native";
 import { Button } from "./components";
