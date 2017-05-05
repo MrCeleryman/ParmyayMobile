@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import { Text, TextInput, View, Animated, Image, Easing, ScrollView } from "react-native";
 import { Button, Input } from "./components";
 import styles from "./styles";
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default class Home extends Component {
 	spinButtonValue: number;
@@ -17,13 +16,7 @@ export default class Home extends Component {
 	}
 
 	static navigationOptions = {
-		title: "Home Page",
-		drawer: () => ({
-			label: 'Parmyay',
-			icon: () => (
-				<Icon name="home" />
-			),
-		}),
+		title: "Home Page"
 	};
 
 	spinButton = () => {
@@ -56,8 +49,8 @@ export default class Home extends Component {
 		}
 	}
 
-	navigateToPage = () => {
-		this.props.navigation.navigate("Page");
+	navigateToPage = () => {		
+		this.props.navigation.navigate("Drawer");
 	}
 
 	render() {

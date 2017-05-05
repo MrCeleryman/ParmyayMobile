@@ -38,7 +38,7 @@ export default StyleSheet.create({
 		fontWeight: "500"
 	},
 	input: {
-		color: '#000',
+		color: "#000",
 		paddingRight: 5,
 		paddingLeft: 5,
 		fontSize: 16,
@@ -54,8 +54,12 @@ export default StyleSheet.create({
 	},
 	formContainer: {
 		flex: 1,
-		flexDirection: 'row',
-		alignItems: 'center',
-		justifyContent: 'flex-start'
+		flexDirection: "row",
+		alignItems: "center",
+		justifyContent: "flex-start"
+	},
+	image: {
+		width: 50,
+		height: 50
 	}
 });

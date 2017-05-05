@@ -6,26 +6,26 @@ import type { Button } from "../types";
 
 export default (props: Button) => {
 
-	const getStyle = (props: Button, style: any) => ([
-		props.wide ? style.buttonWide : null,
-		props.flat ? style.buttonFlat : style.buttonRaised,
+	const getStyle = () => ([
+		props.wide ? styles.buttonWide : null,
+		props.flat ? styles.buttonFlat : styles.buttonRaised,
 		props.style,
-		props.disabled && !props.flat ? style.buttonRaisedDisabled : null
+		props.disabled && !props.flat ? styles.buttonRaisedDisabled : null
 	]);
 
-	const getTextStyle = (props: Button, style: any) => ([
-		props.flat ? style.buttonFlatText : style.buttonRaisedText,
+	const getTextStyle = () => ([
+		props.flat ? styles.buttonFlatText : styles.buttonRaisedText,
 		props.textStyle,
-		props.disabled && props.flat ? style.buttonFlatDisabled : null
+		props.disabled && props.flat ? styles.buttonFlatDisabled : null
 	]);
 
 	return (
 		<TouchableOpacity
 			onPress={!props.disabled ? props.onPress : null}
-			style={getStyle(props, styles)}>
+			style={getStyle()}>
 			{props.text && typeof props.text == "string" ?
 				<Text
-					style={getTextStyle(props, styles)}>
+					style={getTextStyle()}>
 					{props.text.toUpperCase()}
 				</Text> :
 				props.children}
