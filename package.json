@@ -11,37 +11,43 @@
 		"lint": "eslint src",
 		"prebuild": "npm-run-all cache clean watchres lint",
 		"start": "node node_modules/react-native/local-cli/cli.js start",
-		"test": "jest",
-		"test:coverage": "jest --coverage",
-		"test:update": "jest -u",
-		"test:watch": "jest --watch",
+		"test": "jest --no-cache --coverage",
+		"test:update": "jest -u --no-cache --coverage",
 		"watchres": "watchman watch-del-all && watchman watch-project C:\\Parmyaymobile"
 	},
 	"dependencies": {
 		"mobile-center-analytics": "0.4.0",
 		"mobile-center-crashes": "0.4.0",
-		"react": "15.5.1",
-		"react-native": "0.42.3",
-		"react-navigation": "1.0.0-beta.7"
+		"react": "16.0.0-alpha.6",
+		"react-native": "0.44.0",
+		"react-navigation": "1.0.0-beta.9",
+		"react-native-vector-icons": "^4.1.0"
 	},
 	"devDependencies": {
-		"babel-eslint": "7.2.1",
+		"babel-eslint": "7.2.3",
 		"babel-jest": "19.0.0",
 		"babel-preset-flow": "6.23.0",
 		"babel-preset-react-native-stage-0": "1.0.1",
 		"eslint": "3.19.0",
 		"eslint-plugin-babel": "4.1.1",
-		"eslint-plugin-flowtype": "2.30.4",
+		"eslint-plugin-flowtype": "2.32.1",
 		"eslint-plugin-import": "2.2.0",
 		"eslint-plugin-react": "6.10.3",
-		"eslint-plugin-react-native": "2.3.1",
-		"flow-bin": "0.43.1",
+		"eslint-plugin-react-native": "2.3.2",
+		"flow-bin": "0.45.0",
 		"jest": "19.0.2",
 		"npm-run-all": "4.0.2",
-		"react-test-renderer": "15.5.1",
+		"react-test-renderer": "16.0.0-alpha.6",
 		"rimraf": "2.6.1"
 	},
 	"jest": {
+		"collectCoverageFrom" : [
+			"src/*.{js}",
+			"src/**/*.{js}",
+			"!src/types.js",
+			"!src/styles.js",
+			"!src/theme.js"
+		],
 		"preset": "react-native",
 		"verbose": true
 	}

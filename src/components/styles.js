@@ -10,6 +10,9 @@ export default StyleSheet.create({
 		flexDirection: "row",
 		justifyContent: "center"
 	},
+	buttonWide: {
+		flex: 1
+	},
 	buttonRaised: {
 		backgroundColor: theme.COLOR.ACCENT,
 		margin: 5,
@@ -33,5 +36,30 @@ export default StyleSheet.create({
 	buttonFlatText: {
 		color: theme.COLOR.ACCENT,
 		fontWeight: "500"
+	},
+	input: {
+		color: "#000",
+		paddingRight: 5,
+		paddingLeft: 5,
+		fontSize: 16,
+		lineHeight: 21,
+		flex: 3,
+		flexDirection: "row"
+	},
+	label: {
+		fontSize: 16,
+		paddingLeft: 20,
+		flex: 1,
+		flexDirection: "row"
+	},
+	formContainer: {
+		flex: 1,
+		flexDirection: "row",
+		alignItems: "center",
+		justifyContent: "flex-start"
+	},
+	image: {
+		width: 50,
+		height: 50
 	}
 });

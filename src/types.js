@@ -10,4 +10,15 @@ type Button = {
 	children?: any
 };
 
-export type { Button };
+type Input = {
+	label: string,
+	iconLeft?: boolean,
+	iconRight?: boolean,
+	src?: string,
+	value?: string,
+	onChangeText?: Function,
+	placeholder?: string,
+	secureTextEntry?: string
+};
+
+export type { Button, Input };
